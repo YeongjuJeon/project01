@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>찾아오시는길</title>
+    <meta charset='utf-8'>
+    <meta name='Viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.6'>
+    <meta name='Title' content='경주시청'>
+    <meta name='Subject' content='경주시청 클론코딩'>
+    <meta name='Keywords' content='html5, css3, 웹표준, 관공서, 경주시청'>
+    <meta name='Author' content='yeongju'>
+    <meta name='Publisher' content='yeongju'>
+    <meta name='Description' content='웹접근성,웹표준을 준수한 경주시청 클론코딩입니다'>
+    <meta name='Author-Date' content='2022-10-28'>
+    <meta name='Robots' content='index,follow'>
+
+    <link rel='stylesheet' href='../css/reset.css'>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
+        integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2fe1225ba7983244d0bd2aea45763c26">
+    </script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="mainwrap">
+        <header id="header">
+            <div class="wrap">
+                <h1><a href="../index.html"><img src="../images/logo.png" alt="경주시청"></a></h1>
+                <nav id="nav">
+                    <ul class="depth1 cf">
+                        <li>
+                            <a href="../complaint/index.html"><span>민원안내</span></a>
+                            <div class="depth2_bg">
+                                <div class="wrap cf">
+                                    <div class="depth2_info info1">
+                                        <span></span>
+                                        <p>민원안내</p>
+                                    </div>
+                                    <ul class="depth2">
+                                        <li>
+                                            <a href="#"><span>민원실이용안내</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>민원실안내</span></a></li>
+                                                <li><a href="#"><span>무인민원발급기</span></a></li>
+                                                <li><a href="#"><span>어디서나민원발급</span></a></li>
+                                                <li><a href="#"><span>민원사무편람(민원서식)</span></a></li>
+                                                <li><a href="#"><span>자주하는질문</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="h85"><span>민원편의시책</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>민원후견인제도</span></a></li>
+                                                <li><a href="#"><span>민원인제출생략서류</span></a></li>
+                                                <li><a href="#"><span>민원처리단축마일리지</span></a></li>
+                                                <li><a href="#"><span>사전심사청구제도</span></a></li>
+                                                <li><a href="#"><span>구술민원</span></a></li>
+                                                <li><a href="#"><span>본인서명사실확인제도</span></a></li>
+                                                <li><a href="#"><span>폐업신고 간소화 안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>전자민원</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>전자민원창구</span></a></li>
+                                                <li><a href="#"><span>민원사이트안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>여권민원</span></a></li>
+                                        <li>
+                                            <a href="#"><span>부동산민원</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>부동산이전등기특별조치법</span></a></li>
+                                                <li><a href="#"><span>개별공시지가</span></a></li>
+                                                <li><a href="#"><span>개별주택가격</span></a></li>
+                                                <li><a href="#"><span>관련사이트안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>자동차민원</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>자동차세연납신고</span></a></li>
+                                                <li><a href="#"><span>자동차세 세액계산</span></a></li>
+                                                <li><a href="#"><span>자동차검사일조회</span></a></li>
+                                                <li><a href="#"><span>자동차등록</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>상하수도민원</span></a></li>
+                                        <li>
+                                            <a href="#"><span>정보통신민원</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>정보통신사용전검사</span></a></li>
+                                                <li><a href="#"><span>착공전 설계도 확인</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>지방세</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>지방세안내</span></a></li>
+                                                <li><a href="#"><span>지방세구제제도</span></a></li>
+                                                <li><a href="#"><span>비과세/감면</span></a></li>
+                                                <li><a href="#"><span>지방세민원서식</span></a></li>
+                                                <li><a href="#"><span>납세자보호관</span></a></li>
+                                                <li><a href="#"><span>마을세무사</span></a></li>
+                                                <li><a href="#"><span>지방세 민원상담(위택스봇)</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>옥외광고물</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>허가/신고안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../citizen/index.html"><span>시민참여</span></a>
+                            <div class="depth2_bg">
+                                <div class="wrap cf">
+                                    <div class="depth2_info info2">
+                                        <span></span>
+                                        <p>시민참여</p>
+                                    </div>
+                                    <ul class="depth2">
+                                        <li>
+                                            <a href="#" class="h85"><span>시민참여공간</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>칭찬합시다</span></a></li>
+                                                <li><a href="#"><span>사이버무료광고</span></a></li>
+                                                <li><a href="#"><span>포토갤러리</span></a></li>
+                                                <li><a href="#"><span>문의 및 상담</span></a></li>
+                                                <li><a href="#"><span>자유게시판</span></a></li>
+                                                <li><a href="#"><span>문화재사랑 시민봉사단</span></a></li>
+                                                <li><a href="#"><span>여성친화도시 조성 시민참여단</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>시민제안</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>시민행복제안</span></a></li>
+                                                <li><a href="#"><span>행복톡톡 아이디어 공모</span></a></li>
+                                                <li><a href="#"><span>전자투표</span></a></li>
+                                                <li><a href="#"><span>여론조사</span></a></li>
+                                                <li><a href="#"><span>이전 설문보기</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>정책토론</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>전자공청회</span></a></li>
+                                                <li><a href=""><span>시민원탁회의</span></a></li>
+                                                <li><a href=""><span>정책포럼</span></a></li>
+                                                <li><a href=""><span>설문조사</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>주민참여예산</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>주민참여예산제도</span></a></li>
+                                                <li><a href=""><span>운영계획</span></a></li>
+                                                <li><a href=""><span>주민참여예산위원회</span></a></li>
+                                                <li><a href=""><span>설문조사</span></a></li>
+                                                <li><a href=""><span>시민제안사업</span></a></li>
+                                                <li><a href=""><span>연도별 선정사업 내역</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="h85"><span>신고센터</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>부패&middot;비리 익명신고</span></a></li>
+                                                <li><a href=""><span>안전신문고</span></a></li>
+                                                <li><a href=""><span>예산낭비신고센터</span></a></li>
+                                                <li><a href=""><span>부동산 불법거래 신고</span></a></li>
+                                                <li><a href=""><span>생활불편신고</span></a></li>
+                                                <li><a href=""><span>(사)한국청렴운동본부 신고센터</span></a></li>
+                                                <li><a href=""><span>청렴신문고</span></a></li>
+                                                <li><a href=""><span>환경오염신고</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>인구정책</span></a></li>
+                                        <li><a href="#"><span>경주시 위원회 인력풀<br>등록</span></a></li>
+                                        <li>
+                                            <a href="#"><span>공모전</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>제17회 임산부의날 기념 딸랑이 만들기 DIY 체험접수</span></a></li>
+                                                <li><a href=""><span>제17회 임산부의날 기념 딸랑이 만들기 DIY 체험접수</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="h85"><span>규제개혁</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>규제개혁이란?</span></a></li>
+                                                <li><a href=""><span>규제신고안내</span></a></li>
+                                                <li><a href=""><span>규제신고방(규제입증요청)</span></a></li>
+                                                <li><a href=""><span>국무조정실 규제개혁신문고</span></a></li>
+                                                <li><a href=""><span>행정규제등록서</span></a></li>
+                                                <li><a href=""><span>지방규제혁신 사례집</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>적극행정</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>적극행정 제도 소개</span></a></li>
+                                                <li><a href=""><span>적극행정 소식</span></a></li>
+                                                <li><a href=""><span>적극행정 국민 추천</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../livable/index.html"><span>살기좋은경주</span></a>
+                            <div class="depth2_bg">
+                                <div class="wrap cf">
+                                    <div class="depth2_info info3">
+                                        <span></span>
+                                        <p>살기좋은경주</p>
+                                    </div>
+                                    <ul class="depth2">
+                                        <li>
+                                            <a href="#" class="h85"><span>경주소개</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>상징</span></a></li>
+                                                <li><a href="#"><span>CI</span></a></li>
+                                                <li><a href="#"><span>경주8색</span></a></li>
+                                                <li><a href="#"><span>서체</span></a></li>
+                                                <li><a href="#"><span>시민의노래</span></a></li>
+                                                <li><a href="#"><span>시민헌장</span></a></li>
+                                                <li><a href="#"><span>기본현황</span></a></li>
+                                                <li><a href="#"><span>인구현황</span></a></li>
+                                                <li><a href="#"><span>자매우호도시</span></a></li>
+                                                <li><a href="#"><span>농축수산문 브랜드</span></a></li>
+                                                <li><a href="#"><span>지도서비스</span></a></li>
+                                                <li><a href="#"><span>역대시장/군수</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>경주의역사</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>연혁</span></a></li>
+                                                <li><a href=""><span>지명유래</span></a></li>
+                                                <li><a href=""><span>경주시사</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>시청안내</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>행정조직</span></a></li>
+                                                <li><a href=""><span>청사안내</span></a></li>
+                                                <li><a href=""><span>민원전화/팩스번호 안내</span></a></li>
+                                                <li><a href=""><span>찾아오시는길</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>경주비전</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>시정홍보영상</span></a></li>
+                                                <li><a href=""><span>공약사항</span></a></li>
+                                                <li><a href=""><span>주요시책</span></a></li>
+                                                <li><a href=""><span>2025년 APEC 정상회의 유치</span></a></li>
+                                                <li><a href=""><span>2040 경주미래종합발전계획</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>행정서비스헌장</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>헌장제 목적 및 추진경과</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>청렴투명행정</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>청렴시책</span></a></li>
+                                                <li><a href=""><span>청렴자료실</span></a></li>
+                                                <li><a href=""><span>시민감사관</span></a></li>
+                                                <li><a href=""><span>관련 사이트</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>공공와이파이 안내</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>무료와이파이ZONE</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="h85"><span>시민을 위한 보험</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>경주시민안전보험</span></a></li>
+                                                <li><a href=""><span>경주시민 자전거 보험</span></a></li>
+                                                <li><a href=""><span>영조물배상공제보험</span></a></li>
+                                                <li><a href=""><span>풍수해보험</span></a></li>
+                                                <li><a href=""><span>재난배상책임보험</span></a></li>
+                                                <li><a href=""><span>농업인안전재해보험</span></a></li>
+                                                <li><a href=""><span>농작물재해보험료</span></a></li>
+                                                <li><a href=""><span>야생동물피해보상보험</span></a></li>
+                                                <li><a href=""><span>자동차손해배상보장사업</span></a></li>
+                                                <li><a href=""><span>범죄피해자 보호&middot;지원제도</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../news/index.html"><span>경주소식</span></a>
+                            <div class="depth2_bg">
+                                <div class="wrap cf">
+                                    <div class="depth2_info info4">
+                                        <span></span>
+                                        <p>경주소식</p>
+                                    </div>
+                                    <ul class="depth2">
+                                        <li>
+                                            <a href="#"><span>시정소식</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>공지사항</span></a></li>
+                                                <li><a href="#"><span>월중주요업무계획</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>고시/공고</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>고시/공고</span></a></li>
+                                                <li><a href="#"><span>입찰공고</span></a></li>
+                                                <li><a href="#"><span>채용공고</span></a></li>
+                                                <li><a href="#"><span>개인정보 제3자 제공공고</span></a></li>
+                                                <li><a href="#"><span>분묘개장공고</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>법무행정정보</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>입법예고</span></a></li>
+                                                <li><a href="#"><span>자치법규</span></a></li>
+                                                <li><a href="#"><span>전자공보(시보)</span></a></li>
+                                                <li><a href="#"><span>국가법령정보센터</span></a></li>
+                                                <li><a href="#"><span>고문변호사 현황</span></a></li>
+                                                <li><a href="#"><span>행정심판제도 안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>언론/보도</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>경주시정뉴스</span></a></li>
+                                                <li><a href="#"><span>보도/해명</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>행사알림</span></a>
+                                            <ul class="depth3">
+                                                <li><a href=""><span>행사안내</span></a></li>
+                                                <li><a href=""><span>문화행사안내</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>원전관련 소식</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>한수원소식</span></a></li>
+                                                <li><a href="#"><span>코라드소식</span></a></li>
+                                                <li><a href="#"><span>양성자가속기소식</span></a></li>
+                                                <li><a href="#"><span>환경방사능 감시활동</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>미디어갤러리</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>경주생생꽃소식</span></a></li>
+                                                <li><a href="#"><span>관광이미지</span></a></li>
+                                                <li><a href="#"><span>영상갤러리</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>E-Book모음</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>시정현황</span></a></li>
+                                                <li><a href="#"><span>문화&middot;관광안내(자료)</span></a></li>
+                                                <li><a href="#"><span>아름다운경주이야기</span></a></li>
+                                                <li><a href="#"><span>웹진</span></a></li>
+                                                <li><a href="#"><span>보고서</span></a></li>
+                                                <li><a href="#"><span>도시디자인</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>관내소식</span></a></li>
+                                        <li><a href="#"><span>타기관소식</span></a></li>
+                                        <li><a href="#"><span>반상회자료</span></a></li>
+                                        <li><a href="#"><span>알짜배기 경주소식<br>알리미</span></a></li>
+                                        <li><a href="#"><span>경상북도 청년정책 안내</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../info-open/index.html"><span>정보공개</span></a>
+                            <div class="depth2_bg">
+                                <div class="wrap cf">
+                                    <div class="depth2_info info5">
+                                        <span></span>
+                                        <p>정보공개</p>
+                                    </div>
+                                    <ul class="depth2">
+                                        <li>
+                                            <a href="#"><span>정보공개제도</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>업무처리절차</span></a></li>
+                                                <li><a href="#"><span>정보공개수수료</span></a></li>
+                                                <li><a href="#"><span>대한민국정보공개</span></a></li>
+                                                <li><a href="#"><span>비공개대상정보범위세부기준</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>사전정보공표</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>공표목록</span></a></li>
+                                                <li><a href="#"><span>정보목록</span></a></li>
+                                                <li><a href="#"><span>정보목록조회</span></a></li>
+                                                <li><a href="#"><span>정보목록(2012~2013)</span></a></li>
+                                                <li><a href="#"><span>업무추진비</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>정책실명제</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>정책실명제</span></a></li>
+                                                <li><a href="#"><span>국민신청실명제 신청</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>주요추진시책</span></a></li>
+                                        <li>
+                                            <a href="#" class="h85"><span>예산 &middot; 재정</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>세입세출예산서</span></a></li>
+                                                <li><a href="#"><span>세입세출결산서</span></a></li>
+                                                <li><a href="#"><span>재정투자심사현황</span></a></li>
+                                                <li><a href="#"><span>재정공시</span></a></li>
+                                                <li><a href="#"><span>재정정보공개</span></a></li>
+                                                <li><a href="#"><span>성인지예산</span></a></li>
+                                                <li><a href="#"><span>지방재정365</span></a></li>
+                                                <li><a href="#"><span>성과예산서</span></a></li>
+                                                <li><a href="#"><span>중요재산 현황공시</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="h85"><span>통계</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>통계연보</span></a></li>
+                                                <li><a href="#"><span>사업체조사보고서(2013~2018기준)</span></a></li>
+                                                <li><a href="#"><span>사업체조가보고서(2019기준~)</span></a></li>
+                                                <li><a href="#"><span>광업제조업조사보고서</span></a></li>
+                                                <li><a href="#"><span>사회조사결과보고서</span></a></li>
+                                                <li><a href="#"><span>경주시 산업구조의 변화</span></a></li>
+                                                <li><a href="#"><span>정책통계지도</span></a></li>
+                                                <li><a href="#"><span>살고싶은 우리동네</span></a></li>
+                                                <li><a href="#"><span>지역현안 소통지도</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>지방공기업</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>산하 지방공기업 결산정보</span></a></li>
+                                                <li><a href="#"><span>지방공기업이란</span></a></li>
+                                                <li><a href="#"><span>지방공기업현황</span></a></li>
+                                                <li><a href="#"><span>지방공기업 경영정보</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>공공데이터개방</span></a></li>
+                                        <li><a href="#"><span>계약정보공개</span></a></li>
+                                        <li><a href="#"><span>계약관련서식</span></a></li>
+                                        <li>
+                                            <a href="#"><span>조직및인사통계공개</span></a>
+                                            <ul class="depth3">
+                                                <li><a href="#"><span>조직운영5대지표공개</span></a></li>
+                                                <li><a href="#"><span>인사통계</span></a></li>
+                                                <li><a href="#"><span>조직운영 감사결과</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>공공저작물</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../sector-info/index.html"><span>분야별정보</span></a></li>
+                    </ul>
+                </nav>
+                <div class="header_right cf">
+                    <div class="hr-lang">
+                        <div class="hr-lang-off">
+                            <a href="#">Language</a>
+                            <div class="hr-lang-on">
+                                <a href="#">English</a>
+                                <a href="#">日本語</a>
+                                <a href="#">中文</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-search">
+                        <a href="#"></a>
+                    </div>
+                    <div class="hr-menu">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="section">
+            <div class="section-guide">
+                <div class="wrap">
+                    <h4>HOME</h4>
+                    <h4>살기좋은경주</h4>
+                    <h4>시청안내</h4>
+                    <h4>찾아오시는길</h4>
+                    <h4><strong>경주시청</strong></h4>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="wrap cf">
+                    <div class="sc-left">
+                        <h2>시민참여</h2>
+                        <ul class="depth1">
+                            <li><a href="#">경주소개</a></li>
+                            <li><a href="#">경주의역사</a></li>
+                            <li class="on">
+                                <a href="#">시청안내</a>
+                                <ul class="depth2">
+                                    <li><a href="#">행정조직</a></li>
+                                    <li><a href="#">청사안내</a></li>
+                                    <li><a href="#">민원전화/팩스번호 안내</a></li>
+                                    <li><a href="#" class="on2">찾아오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">경주비전</a></li>
+                            <li><a href="#">행정서비스헌장</a></li>
+                            <li><a href="#">청렴투명행정</a></li>
+                            <li><a href="#">공공와이파이 안내</a></li>
+                            <li><a href="#">시민을 위한 보험</a></li>
+                        </ul>
+                    </div>
+                    <div class="sc-right">
+                        <div class="scr-city">
+                            <h2>경주시청</h2>
+                            <a href="#" class="scr-on">경주시청</a>
+                            <a href="#">직속기관/본부/사업소</a>
+                            <div class="scr-top">
+                                <h3>경주시청 오시는길</h3>
+                                <a href="#">길찾기</a>
+                            </div>
+                            <div id="map" style="width:100%;height:400px;"></div>
+                            <div class="scr-middle">
+                                <h5>터미널에서 오실때(자가용)</h5>
+                                <p>고속버스터미널 - 팔우정삼거리(좌회전) - 경주역(직진 : 포항방면) - 경주교 - 형제주유소(우회전) - 철도건널목 - 신호등 사거리에서 우회전 -
+                                    시청
+                                </p>
+                                <h5>경주IC에서 오실때</h5>
+                                <p>경포산업도로(포항방면) - 구황교 - 백률사삼거리(좌회전) - 시청(후문)</p>
+                                <h5>버스노선</h5>
+                                <h6>시청 : 60번, 61번, 70번, 260번</h6>
+                                <h5>내비게이션 주소</h5>
+                                <h6>신주소 : 경상북도 경주시 양정로 260</h6>
+                                <h6>지번주소 : 경상북도 경주시 동천동 800번지</h6>
+                                <h5 class="left">무인민원발급기 설치장소 안내</h5>
+                                <a href="#">바로가기</a>
+                            </div>
+                        </div>
+                        <div class="scr-bottom">
+                            <div class="scrb1">
+                                <h6>자료 제공 담당부서 : 시민봉사과 민원여권팀(☎ 054-779-6671) / 최근수정일:2022-10-19</h6>
+                                <div class="scrb1-satisfy">
+                                    <p>
+                                        <strong>만족도평가</strong> 현재 페이지의 내용과 사용편의성에 만족하십니까? 조사결과는 서비스 개선을 위해 활용됩니다.
+                                    </p>
+                                    <form action="#" method="post">
+                                        <input type="radio" name="satisfy" id="check1">
+                                        <label for="check1">매우만족</label>
+                                        <input type="radio" name="satisfy" id="check2">
+                                        <label for="check2">만족</label>
+                                        <input type="radio" name="satisfy" id="check3">
+                                        <label for="check3">보통</label>
+                                        <input type="radio" name="satisfy" id="check4">
+                                        <label for="check4">불만족</label>
+                                        <input type="radio" name="satisfy" id="check5">
+                                        <label for="check5">매우불만족</label>
+                                        <input type="text" class="txtbox">
+                                        <input type="button" value="등록하기" class="txtbox-btn">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="scrb2">
+                                <h4>
+                                    <span>경주시청</span>이 창작한 <span>민원실안내</span> 저작물은 "공공누리" <a href="#">제1유형:출처표시</a> 조건에
+                                    따라 이용 할 수 있습니다.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer id="footer">
+            <div class="wrap">
+                <div class="footer-top cf">
+                    <a href="#" class="ft-box ft-box1">경주시 주요 홈페이지</a>
+                    <a href="#" class="ft-box ft-box2">읍&middot;면&middot;동 홈페이지</a>
+                    <a href="#" class="ft-box ft-box3">관련기관 홈페이지</a>
+                    <a href="#" class="ft-box ft-box4">경주시 배너모음</a>
+                </div>
+                <div class="footer-bottom">
+                    <div class="fb1">
+                        <ul class="cf">
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">뷰어다운로드</a></li>
+                            <li class="blue"><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권정책</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">원격지원</a></li>
+                        </ul>
+                    </div>
+                    <div class="fb2 cf">
+                        <address class="fb2-address">
+                            <strong>주소</strong><span>[38102] 경상북도 경주시 양정로 260 (동천동, 경주시청)</span>
+                        </address>
+                        <address class="fb2-phone">
+                            <strong>대표전화</strong><span>054-779-8585</span>
+                        </address>
+                        <a href="#">팩스번호안내</a>
+                    </div>
+                    <div class="fb3">
+                        &copy; 2022 Gyeongju-si. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

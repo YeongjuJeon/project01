@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+#section {
+    width: 100%;
+    height: 660px;
+    padding-top: 95px;
+}
+
+/* SECTION MENU */
+#section .section-guide {
+    width: 100%;
+    height: 50px;
+    background-color: #f0f9ff;
+}
+
+#section .section-guide .wrap h4 {
+    font-size: 16px;
+    float: left;
+    padding: 0 30px 0 10px;
+    line-height: 50px;
+    position: relative;
+}
+
+#section .section-guide .wrap h4::after {
+    content: '';
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url('../../images/chevron-right.png') no-repeat center right;
+}
+
+#section .section-guide .wrap h4:last-child:after {
+    background: none;
+}
+
+#section .section-content {
+    width: 100%;
+    padding: 50px 0;
+    background: #fff;
+}
+
+#section .section-content .sc-left {
+    width: 250px;
+    float: left;
+}
+
+#section .section-content .sc-left h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* CLASS ON */
+#section .section-content .sc-left>.depth1>li.on>a {
+    border: 1px solid #345df3;
+    border-radius: 10px 10px 0 0;
+    background-color: #345df3;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#section .section-content .sc-left>.depth1>li.on>a::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url('../../images/control.png') no-repeat 0 0;
+    transform: rotate(90deg);
+}
+
+#section .section-content .sc-left>.depth1>li.on>.depth {
+    display: block;
+}
+
+#section .section-content .sc-left>.depth1>li.on>.depth2 {
+    display: block;
+    border: 1px solid #345df3;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+}
+
+#section .section-content .sc-left>.depth1>li.on>.depth2>li>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0 30px;
+    position: relative;
+}
+
+#section .section-content .sc-left>.depth1>li.on>.depth2>li>a::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+}
+
+/* NORMAL */
+#section .section-content .sc-left>.depth1>li>a {
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0 20px;
+    position: relative;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+#section .section-content .sc-left>.depth1>li>a::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url('../../images/control.png') no-repeat 0 -40px;
+    transform: rotate(-90deg);
+}
+
+#section .section-content .sc-left>.depth1>li>a:hover {
+    background-color: #345df3;
+}
+
+#section .section-content .sc-left>.depth1>li>a:hover {
+    color: #fff;
+}
+
+#section .section-content .sc-left>.depth1>li>a:hover:after {
+    background: url('../../images/control.png') no-repeat 0 0;
+}
+
+#section .section-content .sc-left>.depth1>li>.depth2 {
+    display: none;
+}
+
+#section .section-content .sc-right {
+    width: 1050px;
+    float: left;
+    padding-left: 50px;
+
+}
+
+#section .section-content .sc-right>h2 {
+    font-size: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #808080;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#section .section-content .sc-right .scr1 {
+    text-align: center;
+    float: left;
+    width: 50%;
+    font-size: 18px;
+}
+
+#section .section-content .sc-right .scr1 h3 {
+    font-size: 18px;
+    margin: 60px 0 10px 0;
+}
+
+#section .section-content .sc-right .scr1 input {
+    width: 170px;
+    height: 70px;
+    background-color: #fff;
+    border: 2px solid #888;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+#section .section-content .sc-right .scr1 input:focus {
+    background-color: #345df3;
+    border: 2px solid #345df3;
+    color: #fff;
+}
+
+#section .section-content .sc-right .scr2 {
+    width: 50%;
+    float: left;
+    /* background-color: tomato; */
+    font-size: 18px;
+    padding-left: 30px;
+    border-left: 1px solid #888;
+}
+
+#section .section-content .sc-right .scr2 .scr2-box {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#section .section-content .sc-right .scr2 .scr2-box h4 {
+    font-size: 18px;
+    width: 150px;
+    float: left;
+}
+
+#section .section-content .sc-right .scr2 .scr2-box input {
+    float: left;
+    padding: 5px 10px;
+    width: 300px;
+    border: 1px solid #888;
+}
+
+#section .section-content .sc-right .scr2 .scr2-box span {
+    display: block;
+    width: 100%;
+    height: 15px;
+    clear: both;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#section .section-content .sc-right .scr2 fieldset {
+    clear: both;
+}
+
+#section .section-content .sc-right .scr2>h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#section .section-content .sc-right .scr2 fieldset .f-box {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #eee;
+    font-size: 16px;
+}
+
+#section .section-content .sc-right .scr2 fieldset input {
+    float: left;
+    margin-top: 7px;
+}
+
+#section .section-content .sc-right .scr2 fieldset label {
+    float: left;
+    margin-left: 10px;
+}
+
+#section .section-content .sc-right .login-final {
+    clear: both;
+    font-size: 16px;
+    padding: 10px 30px;
+    border: 2px solid #345df3;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: block;
+    margin: 80px auto;
+    position: relative;
+    top: 40px;
+}
+
+#section .section-content .sc-right .login-final:focus {
+    background-color: #345df3;
+    color: #fff;
+}
